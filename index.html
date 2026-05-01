@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Phạm Văn Trọng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #1c1c1c;
+      --ink-mid: #555;
+      --ink-light: #999;
+      --border: #ddd;
+      --bg-page: #f0ede8;
+    }
+
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-page);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 3.5rem 1.5rem;
+    }
+
+    .page {
+      background: #fff;
+      width: 800px;
+      padding: 4rem 4.5rem;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--ink);
+      margin-bottom: 2.8rem;
+    }
+
+    .name {
+      font-family: 'Lora', serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .name em {
+      font-style: italic;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .job-title {
+      font-size: 10.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-end;
+    }
+
+    .contact-item {
+      font-size: 12px;
+      color: var(--ink-mid);
+      font-weight: 300;
+    }
+
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 195px;
+      gap: 4rem;
+    }
+
+    .section {
+      margin-bottom: 2.4rem;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .s-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      font-weight: 500;
+      margin-bottom: 1.1rem;
+    }
+
+    .summary {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--ink-mid);
+      font-weight: 300;
+    }
+
+    .exp-item {
+      margin-bottom: 1.8rem;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .exp-period {
+      font-size: 11.5px;
+      color: var(--ink-light);
+      font-weight: 300;
+    }
+
+    .exp-company {
+      font-size: 12px;
+      color: var(--ink-light);
+      font-style: italic;
+      font-family: 'Lora', serif;
+      margin-bottom: 7px;
+    }
+
+    .exp-desc {
+      font-size: 12.5px;
+      line-height: 1.75;
+      color: var(--ink-mid);
+      font-weight: 300;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .tag {
+      font-size: 10px;
+      padding: 2px 8px;
+      border: 0.5px solid var(--border);
+      color: var(--ink-light);
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .skill-group-name {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--ink-mid);
+      margin-bottom: 5px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .skill-list span {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--ink-mid);
+    }
+
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--ink-mid);
+      font-weight: 300;
+      margin-bottom: 7px;
+    }
+
+    .lang-level {
+      color: var(--ink-light);
+      font-size: 11px;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div class="name">Phạm Văn <em>Trọng</em></div>
+      <div class="header-right">
+        <div class="job-title">Middle Full-Stack Developer</div>
+        <div class="contacts">
+          <span class="contact-item">phamvantong@gmail.com</span>
+          <span class="contact-item">0912 345 678</span>
+          <span class="contact-item">github.com/phamvantong</span>
+          <span class="contact-item">Hà Nội, Việt Nam</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="main">
+
+        <div class="section">
+          <div class="s-label">Giới thiệu</div>
+          <p class="summary">Middle Full-Stack Developer với 3 năm kinh nghiệm thực chiến, tự học từ đầu. Thành thạo
+            Laravel và React, quen làm việc trong môi trường Agile. Tích cực ứng dụng AI (Cursor, Claude, ChatGPT) vào
+            quy trình phát triển — từ hỗ trợ viết code, debug đến sinh tài liệu — giúp rút ngắn thời gian phát triển và
+            nâng chất lượng sản phẩm.</p>
+        </div>
+
+        <div class="section">
+          <div class="s-label">Kinh nghiệm</div>
+
+          <div class="exp-item">
+            <div class="exp-row">
+              <span class="exp-role">Middle Full-Stack Developer</span>
+              <span class="exp-period">01/2023 — Nay</span>
+            </div>
+            <div class="exp-company">Công ty TNHH Công nghệ XYZ, Hà Nội</div>
+            <div class="exp-desc">Phát triển và bảo trì hệ thống quản lý nội bộ với Laravel + React. Thiết kế RESTful
+              API, viết migration và seeder. Tham gia review code và hỗ trợ junior developer trong team.</div>
+            <div class="exp-tags">
+              <span class="tag">Laravel</span><span class="tag">React</span><span class="tag">MySQL</span><span
+                class="tag">REST API</span><span class="tag">Git</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-row">
+              <span class="exp-role">Junior Web Developer</span>
+              <span class="exp-period">06/2021 — 12/2022</span>
+            </div>
+            <div class="exp-company">Công ty Cổ phần ABC Software, Hà Nội</div>
+            <div class="exp-desc">Xây dựng tính năng cho nền tảng thương mại điện tử B2B. Tích hợp thanh toán VNPay và
+              gửi email qua Mailgun. Viết unit test với PHPUnit, đạt coverage ~75%.</div>
+            <div class="exp-tags">
+              <span class="tag">Laravel</span><span class="tag">jQuery</span><span class="tag">MySQL</span><span
+                class="tag">PHPUnit</span><span class="tag">VNPay</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-row">
+              <span class="exp-role">Thực tập sinh PHP</span>
+              <span class="exp-period">01/2021 — 05/2021</span>
+            </div>
+            <div class="exp-company">Startup DEF, Hà Nội</div>
+            <div class="exp-desc">Hỗ trợ phát triển tính năng blog và quản lý người dùng. Làm quen với Git flow, code
+              review và deploy lên server Linux.</div>
+            <div class="exp-tags">
+              <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">MySQL</span><span
+                class="tag">Linux</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <div class="s-label">Dự án nổi bật</div>
+
+          <div class="exp-item">
+            <div class="exp-row">
+              <span class="exp-role">Hệ thống quản lý kho hàng</span>
+              <span class="exp-period">2023</span>
+            </div>
+            <div class="exp-company">Dự án cá nhân</div>
+            <div class="exp-desc">Xây dựng hệ thống quản lý kho cho doanh nghiệp vừa và nhỏ. Backend API với Laravel,
+              frontend SPA với React + Redux. Hỗ trợ xuất báo cáo Excel và in PDF. Dùng Cursor + Claude để tăng tốc phát
+              triển và sinh tài liệu API tự động.</div>
+            <div class="exp-tags">
+              <span class="tag">Laravel</span><span class="tag">React</span><span class="tag">Redux</span><span
+                class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">Cursor</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar">
+
+        <div class="sidebar-section">
+          <div class="s-label">Kỹ năng</div>
+          <div class="skill-group">
+            <div class="skill-group-name">Backend</div>
+            <div class="skill-list">
+              <span>Laravel, PHP 8</span>
+              <span>Eloquent ORM</span>
+              <span>REST API design</span>
+              <span>Form Requests, Policy</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Frontend</div>
+            <div class="skill-list">
+              <span>React, Redux</span>
+              <span>Alpine.js</span>
+              <span>TailwindCSS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Database</div>
+            <div class="skill-list">
+              <span>MySQL, Redis</span>
+              <span>Migration, Seeder</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Công cụ</div>
+            <div class="skill-list">
+              <span>Git, Docker</span>
+              <span>Postman, Nginx</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">AI Tools</div>
+            <div class="skill-list">
+              <span>Cursor, Claude</span>
+              <span>ChatGPT, Copilot</span>
+              <span>Prompt engineering</span>
+              <span>AI-assisted docs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="s-label">Ngôn ngữ</div>
+          <div class="lang-row"><span>Tiếng Việt</span><span class="lang-level">Bản ngữ</span></div>
+          <div class="lang-row"><span>Tiếng Anh</span><span class="lang-level">Đọc tài liệu tốt</span></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="s-label">Quan tâm</div>
+          <div class="skill-list">
+            <span>Clean Architecture</span>
+            <span>AI-powered workflow</span>
+            <span>API performance</span>
+            <span>Open source</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
